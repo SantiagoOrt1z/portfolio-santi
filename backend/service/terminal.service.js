@@ -52,52 +52,15 @@ const projects = {
 };
 
 export const processCommand = (command) => {
-  const [mainCommand, argument] = command.trim().toLowerCase().split(" ");
+  if (!command || typeof command !== "string") {
+    return ["Invalid command"];
+  }
+
+  const [mainCommand, argument] = command.trim().toLowerCase().split(/\s+/);
+
   if (!commands[mainCommand]) {
     return [`Command not found: ${mainCommand}`];
   }
 
   return commands[mainCommand](argument);
-  /*switch (mainCommand) {
-    case "help":
-      return [
-        "Available commands:",
-        "help",
-        "about",
-        "project <name>",
-        "skills",
-        "contact",
-      ];
-
-    case "project": {
-      if (!argument) {
-        return ["Please specify a project name.", ...Object.keys(projects)];
-      }
-
-      if (!projects[argument]) {
-        return [
-          `Project "${argument}" not found.`,
-          "Available projects:",
-          ...Object.keys(projects),
-        ];
-      }
-
-      return projects[argument];
-    }
-
-    case "skills":
-      return ["Node.js", "Express", "PostgreSQL", "REST APIs"];
-
-    case "about":
-      return [
-        "Mi nombre es Santiago Ortiz",
-        "Full Stack Developer orientado en Backend",
-      ];
-
-    case "contact":
-      return ["email: santiagoortiz0609@hotmail.com"];
-
-    default:
-      return [`Command not found: ${command}`];
-  }*/
 };
