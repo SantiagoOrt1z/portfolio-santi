@@ -1,23 +1,57 @@
-body {
+* {
   margin: 0;
-  background: black;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html, body, #root {
+  height: 100%;
+}
 .terminal {
   background: black;
   color: #ffffff;
-  font-family: monospace;
-  padding: 20px;
-  height: 100vh;
+  font-family: Consolas, monospace;
+  height: 100%;
+  width: 100%;
   overflow-y: auto;
+  padding: 8px;
 }
 
 input {
-  background: transparent;
+   background: transparent;
   border: none;
   outline: none;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  caret-color: transparent;
+}
+
+.command-line {
   color: #ffffff;
-  font-family: monospace;
-  font-size: 16px;
-  width: 90%;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.output-line {
+  color: #cccccc;
+}
+
+.history-block {
+  margin-bottom: 8px;
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background: white;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
