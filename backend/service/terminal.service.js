@@ -23,23 +23,46 @@ const commands = {
     return projects[argument];
   },
   skills: () => {
-    return ["Node.js", "Express", "PostgreSQL", "REST APIs"];
+    return [
+      "Backend Stack:",
+      "  - Node.js / Express",
+      "  - PostgreSQL",
+      "  - REST API design",
+      "  - Middleware & routing",
+      "",
+      "Frontend:",
+      "  - React (Vite)",
+      "  - Fetch API",
+      "",
+      "Enfoque:",
+      "  - Arquitectura limpia",
+      "  - Código modular",
+      "  - Buenas prácticas",
+    ];
   },
   about: () => {
     return [
-      "Mi nombre es Santiago Ortiz",
-      "Full Stack Developer orientado en Backend",
+      "Santiago Ortiz",
+      "Full Stack Developer orientado al Backend",
+      "Desarrollo aplicaciones web con foco en la arquitectura del backend, diseño de APIs REST y modelado de bases de datos relacionales.",
+      "Trabajo principalmente con Node.js, Express y PostgreSQL, complementando con interfaces funcionales en React cuando es necesario.",
+      "Busco seguir creciendo dentro de un equipo profesional donde pueda fortalecer mis habilidades técnicas y aportar soluciones bien estructuradas.",
     ];
   },
   contact: () => {
-    return ["email: santiagoortiz0609@hotmail.com"];
+    return [
+      "Email: santiagoortiz0609@hotmail.com",
+      "Phone Number: +54 9 11 3393-3560",
+      "Github: https://github.com/SantiagoOrt1z",
+      "LinkedIn: https://www.linkedin.com/in/santiago-ortiz-673216227/",
+    ];
   },
 };
 
 const projects = {
   "dojo-connect": [
     "Dojo Connect",
-    "App social para desarrolladores",
+    "Red social para amantes de los deportes de contacto",
     "React + Node + Express + PostgreSQL",
     "https://github.com/SantiagoOrt1z/Dojo-Connect",
   ],
@@ -47,7 +70,7 @@ const projects = {
     "Portfolio CMD",
     "Simulador de terminal interactiva",
     "React + Express",
-    "Lo estás viendo 😎",
+    "Lo estás viendo 😎, pero si queres ver el codigo y como lo construí: https://github.com/SantiagoOrt1z/portfolio-santi",
   ],
 };
 
