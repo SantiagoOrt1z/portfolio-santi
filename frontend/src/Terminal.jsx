@@ -95,6 +95,30 @@ export default function Terminal() {
     setIsTyping(false);
   };
 
+  const renderLine = (line) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+    const parts = line.split(urlRegex);
+
+    return parts.map((part, index) => {
+      if (part.match(urlRegex)) {
+        return (
+          <a
+            key={index}
+            href={part}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#4ea1ff", textDecoration: "underline" }}
+          >
+            {part}
+          </a>
+        );
+      }
+
+      return part;
+    });
+  };
+
   return (
     <div
       ref={terminalRef}
@@ -110,7 +134,7 @@ export default function Terminal() {
                 item.type === "command" ? "command-line" : "output-line"
               }
             >
-              {line}
+              {renderLine(line)}
             </div>
           ))}
         </div>
