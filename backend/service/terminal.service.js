@@ -45,6 +45,7 @@ const commands = {
       "Santiago Ortiz",
       "Full Stack Developer orientado al Backend",
       "Desarrollo aplicaciones web con foco en la arquitectura del backend, diseño de APIs REST y modelado de bases de datos relacionales.",
+      "Con experiencia previa en una startup, trabajando en entornos colaborativos y en desarrollo de producto real.",
       "Trabajo principalmente con Node.js, Express y PostgreSQL, complementando con interfaces funcionales en React cuando es necesario.",
       "Busco seguir creciendo dentro de un equipo profesional donde pueda fortalecer mis habilidades técnicas y aportar soluciones bien estructuradas.",
     ];
