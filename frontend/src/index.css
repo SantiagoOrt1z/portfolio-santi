@@ -4,21 +4,37 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+/* Bloquea el viewport */
+html, body {
+  height: 100%;
+  background: black;
+  overflow: hidden;
+}
+
+/* Root ocupa toda la pantalla */
+#root {
   height: 100%;
 }
+
+/* Terminal ocupa exactamente el viewport */
 .terminal {
   background: black;
   color: #ffffff;
   font-family: Consolas, monospace;
-  height: 100dvh;
+
+  height: 100%;
   width: 100%;
+
   overflow-y: auto;
   padding: 8px;
 }
 
+/* Input invisible real */
 input {
-   background: transparent;
+  position: absolute;
+  opacity: 0;
+
+  background: transparent;
   border: none;
   outline: none;
   color: white;
