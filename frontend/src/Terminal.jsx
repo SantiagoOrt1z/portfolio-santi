@@ -77,11 +77,14 @@ export default function Terminal() {
     setIsTyping(true);
 
     try {
-      const response = await fetch("http://localhost:3001/api/terminal", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ command: userInput }),
-      });
+      const response = await fetch(
+        "https://portfolio-santi.onrender.com/api/terminal",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ command: userInput }),
+        },
+      );
 
       const data = await response.json();
 
