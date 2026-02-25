@@ -27,6 +27,18 @@ export default function Terminal() {
     }
   }, [isTyping]);
 
+  useEffect(() => {
+    setHistory([
+      {
+        type: "output",
+        text: [
+          "Santiago Portfolio Terminal v1.0",
+          'Type "help" to see available commands.',
+        ],
+      },
+    ]);
+  }, []);
+
   const typeLine = (line) => {
     return new Promise((resolve) => {
       let i = 0;
@@ -144,10 +156,6 @@ export default function Terminal() {
       ))}
 
       <div style={{ display: "flex", alignItems: "center" }}>
-        <div>
-          <p>Santiago Portfolio Terminal v1.0</p>
-          <p>Type "help" to see available commands.</p>
-        </div>
         <span style={{ marginRight: "6px" }}>{currentPath}&gt;</span>
 
         <span>{input}</span>
