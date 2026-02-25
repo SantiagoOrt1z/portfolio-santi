@@ -6,6 +6,7 @@ const commands = {
       "about",
       "project <name>",
       "skills",
+      "experience",
       "contact",
     ];
   },
@@ -21,6 +22,17 @@ const commands = {
       ];
     }
     return projects[argument];
+  },
+  experience: () => {
+    return [
+      "DEVOCAMP STARTUP",
+      "Desarrollador Backend",
+      "2023-2024 || Django Framework",
+      "Desarrollo de Funcionalidades Core: Implementación demódulos críticos como sistemas de autenticación(Inicio/Cierre de sesión) y gestión de sesiones de usuario utilizando Django.",
+      "Ciclo de Vida de Software: Gestión de tareas mediante tableros ágiles, cumpliendo con la entrega de requerimientos técnicos y funcionales en tiempos cortos.",
+      "Calidad de Código: Responsable de la escritura de tests unitarios y pruebas de integración para asegurar la estabilidad del sistema antes del despliegue.",
+      "Colaboración Técnica: Participación activa en el flujo de Code Reviews y manejo de versiones con Git, asegurando la integridad de la rama principal (main branch).",
+    ];
   },
   skills: () => {
     return [
