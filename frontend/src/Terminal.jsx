@@ -144,6 +144,10 @@ export default function Terminal() {
       ))}
 
       <div style={{ display: "flex", alignItems: "center" }}>
+        <div>
+          <p>Santiago Portfolio Terminal v1.0</p>
+          <p>Type "help" to see available commands.</p>
+        </div>
         <span style={{ marginRight: "6px" }}>{currentPath}&gt;</span>
 
         <span>{input}</span>
